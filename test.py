@@ -39,12 +39,12 @@ def main():
     GRU_test_acc = evaluate(model, test_loader)
     print('GRU_test acc:', GRU_test_acc)
 
-    test_db = Action('data\\test', mode='test', model='ResNet3D')
-    test_loader = DataLoader(test_db, batch_size=batchsz, num_workers=2)
-    model = generate_ResNet3D(18).to(device)
-    model.load_state_dict(torch.load('ResNet3D_best.mdl'))
-    ResNet3D_test_acc = evaluate(model, test_loader)
-    print('ResNet3D_test acc:', ResNet3D_test_acc)
+    # test_db = Action('data\\test', mode='test', model='ResNet3D')
+    # test_loader = DataLoader(test_db, batch_size=batchsz, num_workers=2)
+    # model = generate_ResNet3D(18).to(device)
+    # model.load_state_dict(torch.load('ResNet3D_best.mdl'))
+    # ResNet3D_test_acc = evaluate(model, test_loader)
+    # print('ResNet3D_test acc:', ResNet3D_test_acc)
 
 if __name__ == '__main__':
     main()
