@@ -82,10 +82,10 @@ class Action(Dataset):
         if self.mode=='train':
             a=random.choice([0,1,2,3,4,5])
             if a == 1 or a==3:
-                x = random.uniform(-5, 5)
+                x = random.uniform(-10, 10)
                 img[:, 0, :, :, :] = img[:, 0, :, :, :] + x
             if a == 2 or a==3:
-                y = random.uniform(-5, 5)
+                y = random.uniform(-10, 10)
                 img[:, 2, :, :, :] = img[:, 2, :, :, :] + y
 
         img=img[0,:,:,:,:]
